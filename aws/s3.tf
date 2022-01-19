@@ -97,3 +97,13 @@ resource "aws_s3_bucket" "sample_bucket_5" {
     yor_trace            = "474aa4af-b536-4c80-9d2a-ae18d3479d04"
   }
 }
+
+resource "aws_s3_bucket" "untagged" {
+  # bucket is not encrypted
+  bucket = "${local.resource_prefix.value}-untagged"
+  acl    = "private"
+  versioning {
+    enabled = true
+  }
+  force_destroy = true
+}
