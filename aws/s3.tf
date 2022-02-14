@@ -15,6 +15,7 @@ resource "aws_s3_bucket" "sample_bucket_1" {
     git_org              = "tronxd"
     git_repo             = "terraform_samples"
     yor_trace            = "c0d78c48-5f9e-4187-a04e-a6bb0e7ed9f8"
+    env                  = "dev"
   }
 }
 
@@ -35,6 +36,7 @@ resource "aws_s3_bucket" "sample_bucket_2" {
     git_org              = "tronxd"
     git_repo             = "terraform_samples"
     yor_trace            = "3f1c4edc-992e-429a-8300-f6b48b795c66"
+    env                  = "dev"
   }
 }
 
@@ -55,6 +57,7 @@ resource "aws_s3_bucket" "sample_bucket_3" {
     git_org              = "tronxd"
     git_repo             = "terraform_samples"
     yor_trace            = "20295b9d-6fb8-4280-9a57-b2b9c22afe63"
+    env                  = "stage"
   }
 }
 
@@ -75,6 +78,7 @@ resource "aws_s3_bucket" "sample_bucket_4" {
     git_org              = "tronxd"
     git_repo             = "terraform_samples"
     yor_trace            = "00398d29-90e1-406f-b273-2525d31c26b2"
+    env                  = "prod"
   }
 }
 
@@ -95,6 +99,7 @@ resource "aws_s3_bucket" "sample_bucket_5" {
     git_org              = "tronxd"
     git_repo             = "terraform_samples"
     yor_trace            = "474aa4af-b536-4c80-9d2a-ae18d3479d04"
+    env                  = "dev"
   }
 }
 
@@ -106,4 +111,8 @@ resource "aws_s3_bucket" "untagged" {
     enabled = true
   }
   force_destroy = true
+  tags = {
+    env       = "dev"
+    yor_trace = "ce0579af-904c-4f76-a7fd-8a5ee4c6eaef"
+  }
 }
