@@ -6,4 +6,8 @@ resource "aws_s3_bucket" "inner" {
     enabled = true
   }
   force_destroy = true
+  tags = {
+    env  = "dev"
+    team = "seceng"
+  }
 }
