@@ -107,3 +107,13 @@ resource "aws_s3_bucket" "untagged" {
   }
   force_destroy = true
 }
+
+resource "aws_s3_bucket" "test_pr" {
+  # bucket is not encrypted
+  bucket = "${local.resource_prefix.value}-test-pr"
+  acl    = "private"
+  versioning {
+    enabled = true
+  }
+  force_destroy = true
+}
