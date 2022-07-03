@@ -106,7 +106,4 @@ resource "aws_s3_bucket" "untagged" {
     enabled = true
   }
   force_destroy = true
-  tags = {
-    yor_trace = "bff33939-0f83-4c2d-a1aa-59156f1dedd4"
-  }
 }
