@@ -6,4 +6,7 @@ resource "aws_s3_bucket" "inner" {
     enabled = true
   }
   force_destroy = true
+  tags = {
+    yor_trace = "e9ef87b1-6249-456e-9d11-38f8ef586c62"
+  }
 }
